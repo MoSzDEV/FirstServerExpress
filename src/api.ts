@@ -4,8 +4,6 @@ import cors from 'cors';
 require('dotenv').config();
 require('./bdd');
 const User = require('./User');
-const notFound = require('./notFound');
-const handleErrors = require('./handleErrors');
 
 app.use(cors({ origin: true }));
 app.use(express.json());
@@ -80,8 +78,19 @@ app.delete('/api/:id', function (req, res, next) {
 });
 
 //midleware
-app.use(notFound);
-app.use(handleErrors);
+app.use(((req, res, next) => {
+  res.status(404).send({error: 'Not found'})
+}))
+
+app.use(((err, req, res, next) => {
+  console.error(err.stack)
+  if (err.name === 'CastError') {
+    res.status(422).send({error: "id used is malformed"})
+  }
+  else
+  res.status(503).send({error: err.message})
+}));
+
 
 
 // Version the api
