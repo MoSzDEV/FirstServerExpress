@@ -3,7 +3,7 @@ export const app = express();
 import cors from 'cors';
 require('dotenv').config();
 require('./bdd');
-const User = require('./user');
+const User = require('./User');
 const notFound = require('./notFound');
 const handleErrors = require('./handleErrors');
 
