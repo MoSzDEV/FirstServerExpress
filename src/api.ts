@@ -7,7 +7,6 @@ const User = require('./User');
 const notFound = require('./notFound');
 const handleErrors = require('./handleErrors');
 
-
 app.use(cors({ origin: true }));
 app.use(express.json());
 app.use(express.raw({ type: 'application/vnd.custom-type' }));
@@ -81,8 +80,8 @@ app.delete('/api/:id', function (req, res, next) {
 });
 
 //midleware
-app.use(notFound)
-app.use(handleErrors)
+app.use(notFound);
+app.use(handleErrors);
 
 
 // Version the api
