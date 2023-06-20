@@ -4,7 +4,7 @@ config();
 
 let pass = process.env.DB_PASSWORD
 
-const connectionString = `mongodb+srv://MoSzDEV:${pass}@clusterserve.f74gjar.mongodb.net/app?connectTimeoutMS=100000?retryWrites=true&w=majority/`
+const connectionString = `mongodb+srv://MoSzDEV:${pass}@clusterserve.f74gjar.mongodb.net/app`
 
 
 mongoose.connect(connectionString)
