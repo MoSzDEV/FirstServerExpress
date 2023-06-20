@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "author": "Matt Spear",
+  "author": "MoSzDEV",
   "scripts": {
     "dev": "nodemon src/index.ts",
+    "bdd": "nodemon src/bdd.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^7.3.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
@@ -22,10 +24,10 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
-  "description": "This example starts an [ExpressJS](https://expressjs.com/) server written in [TypeScript](https://www.typescriptlang.org/).",
+  "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MoSzDEV/express-server.git"
+    "url": ""
   },
   "bugs": {
     "url": "https://github.com/MoSzDEV/express-server/issues"

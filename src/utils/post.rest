@@ -1,0 +1,9 @@
+POST http://localhost:3333/api/createUser
+Content-Type: application/json
+
+{
+    "name": "Ignacio",
+    "employment": "Tester",
+    "active": true,
+    "comment": "Me encantaria unirme al proyecto"
+}

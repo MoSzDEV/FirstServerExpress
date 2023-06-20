@@ -1,0 +1,9 @@
+PUT http://localhost:3333/api/64915277544039ca8521e742
+Content-Type: application/json
+
+{
+    "name": "Mariano",
+    "employment": "Leader",
+    "active": true,
+    "comment": "Demos comienzo a este proyecto"
+    }
