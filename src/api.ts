@@ -3,9 +3,9 @@ export const app = express();
 import cors from 'cors';
 require('dotenv').config();
 require('./bdd');
-const User = require('./models/user');
-const notFound = require('./middleware/notFound');
-const handleErrors = require('./middleware/handleErrors');
+const User = require('./user');
+const notFound = require('./notFound');
+const handleErrors = require('./handleErrors');
 
 
 app.use(cors({ origin: true }));
