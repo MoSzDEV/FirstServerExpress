@@ -4,7 +4,8 @@ config();
 
 let pass = process.env.DB_PASSWORD
 
-const connectionString = `mongodb+srv://MoSzDEV:${pass}@clusterserve.f74gjar.mongodb.net/app`
+const connectionString = `mongodb+srv://MoSzDEV:${pass}@clusterserve.f74gjar.mongodb.net/app?retryWrites=true&w=majority/`
+
 
 mongoose.connect(connectionString)
     .then((db) => console.log(`db is connected`))
